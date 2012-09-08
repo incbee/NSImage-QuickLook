@@ -4,7 +4,7 @@
 
 This is a category on NSImage which lets you get an image containing a Quick Look preview of the content of a given file. If no Quick Look preview is available, it will instead return the file's Finder icon (this is what the Quick Look panel does). It consists of only one method:
 
-    + (NSImage *)imageWithPreviewOfFileAtPath:(NSString *)path ofSize:(NSSize)size asIcon:(BOOL)icon
+    + (NSImage *)imageWithPreviewOfFileAtPath:(NSString *)path ofSize:(NSSize)size asIcon:(BOOL)asIcon
 
 Path should be a full file-system path (i.e. you should do `-stringByExpandingTildeInPath` etc before passing the path to this method).
 
