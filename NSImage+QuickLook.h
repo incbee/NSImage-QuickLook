@@ -11,7 +11,7 @@
 @interface NSImage (QuickLook)
 
 
-+ (NSImage *)imageWithPreviewOfFileAtPath:(NSString *)path ofSize:(NSSize)size asIcon:(BOOL)icon;
++ (NSImage *)imageWithPreviewOfFileAtPath:(NSString *)path ofSize:(NSSize)size asIcon:(BOOL)asIcon;
 
 
 @end

@@ -11,14 +11,14 @@
 @implementation NSImage (QuickLook)
 
 
-+ (NSImage *)imageWithPreviewOfFileAtPath:(NSString *)path ofSize:(NSSize)size asIcon:(BOOL)icon
++ (NSImage *)imageWithPreviewOfFileAtPath:(NSString *)path ofSize:(NSSize)size asIcon:(BOOL)asIcon
 {
     NSURL *fileURL = [NSURL fileURLWithPath:path];
     if (!path || !fileURL) {
         return nil;
     }
     
-    NSDictionary *dict = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:icon] 
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:asIcon] 
                                                      forKey:(NSString *)kQLThumbnailOptionIconModeKey];
     CGImageRef ref = QLThumbnailImageCreate(kCFAllocatorDefault, 
                                             (CFURLRef)fileURL, 
